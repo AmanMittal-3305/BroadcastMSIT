@@ -58,7 +58,7 @@
                 </a>
                 <div class="ms-auto d-flex align-items-center">
                     <div class="nav-item dropdown">
-                        <a href="service.html" class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown">Services</a>
+                        <a href="#services" class="nav-link  text-white" data-bs-toggle="dropdown">Services</a><!--dropdown-toggle-->
                         <!-- <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
                             <a href="feature.html" class="dropdown-item">Features</a>
                             <a href="team.html" class="dropdown-item">Our Team</a>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="service.html" class="nav-link  text-white" data-bs-toggle="dropdown">Services</a><!--dropdown-toggle-->
+                        <a href="team.html" class="nav-link  text-white" data-bs-toggle="dropdown">Team</a><!--dropdown-toggle-->
                         <!-- <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
                             <a href="feature.html" class="dropdown-item">Features</a>
                             <a href="team.html" class="dropdown-item">Our Team</a>
@@ -236,28 +236,27 @@
             <div class="row g-0">
                 <div class="col-lg-6">
                     <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                        <!-- <button type="button" class="btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
                             <span></span>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div class="col-lg-6 pt-lg-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="bg-white rounded-top p-5 mt-lg-5">
                         <p class="fs-5 fw-medium text-primary">About Us</p>
-                        <h1 class="display-6 mb-4">The Best Marketing Agency to Improve Your Business</h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                            diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo</p>
+                        <h1 class="display-6 mb-4">Transforming Visions into Visual Brilliance: Your Premier Broadcast Society</h1>
+                        <p class="mb-4">From innovative production to strategic promotion, we craft and share unforgettable stories that captivate audiences worldwide</p>
                         <div class="row g-5 pt-2 mb-5">
                             <div class="col-sm-6">
                                 <img class="img-fluid mb-4" src="img/icon/icon-5.png" alt="">
                                 <h5 class="mb-3">Managed Services</h5>
-                                <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
+                                <span>We work always in managed manner</span>
                             </div>
                             <div class="col-sm-6">
                                 <img class="img-fluid mb-4" src="img/icon/icon-2.png" alt="">
                                 <h5 class="mb-3">Dedicated Experts</h5>
-                                <span>Clita erat ipsum et lorem et sit sed stet lorem</span>
+                                <span>All members are dedicated and active for helping, guiding others and trying to make this society big </span>
                             </div>
                         </div>
                         <a class="btn btn-primary rounded-pill py-3 px-5" href="">Explore More</a>
@@ -383,7 +382,7 @@
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
                 <p class="fs-5 fw-medium text-primary">Our Projects</p>
-                <h1 class="display-5 mb-5">We've Done Lot's of Awesome Projects</h1>
+                <h1 class="display-5 mb-5" style="color: rgb(1, 158, 231);">We've Done Lot's of Awesome Projects</h1>
             </div>
             <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="project-item mb-5">
@@ -391,7 +390,7 @@
                         <img class="img-fluid" src="img/avensis.jpg" alt="">
                         <div class="project-overlay">
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href="img/avensis.jpg"
-                                data-lightbox="project"><i class="fa fa-eye"></i></a>
+                                data-lightbox="project" ><i class="fa fa-eye"></i></a>
                             <a class="btn btn-lg-square btn-light rounded-circle m-1" href=""><i
                                     class="fa fa-link"></i></a>
                         </div>
@@ -699,6 +698,26 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <!-- <script src="js/background.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('a.nav-link');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+        </script>
+        
 
 </body>
 
