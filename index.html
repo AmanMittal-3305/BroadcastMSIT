@@ -65,7 +65,7 @@
                         <a class="nav-link" href="team.html" style="color: white;">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.msit.in/" style="color: white;">msit.in</a>
+                        <a class="nav-link" href="https://www.msit.in/" style="color: white;" target="_blank">msit.in</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tel:011-45037193" style="color: white;">011-45037193</a>
@@ -73,7 +73,7 @@
                 </ul>
                 <div class="social-icons ms-3 d-flex">
                     <a class="btn btn-sm btn-light text-danger rounded-circle ms-2" href="https://www.instagram.com/broadcastmsit/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a  href="https://www.youtube.com/@broadcastmsit/featured" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm btn-light text-danger rounded-circle ms-2" href="https://www.youtube.com/@broadcastmsit/featured" target="_blank"><i class="fab fa-youtube"></i></a>
                     <a class="btn btn-sm btn-light text-danger rounded-circle ms-2" href="https://www.linkedin.com/company/broadcast-msit/mycompany/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
@@ -707,19 +707,26 @@
             });
         });
         
-    // Function to handle touch events for the "Services" link
-    function handleServicesClick() {
+    // JavaScript to handle click events for the "Services" and "Team" links
+    document.querySelector('.nav-link[href="service.html"]').addEventListener('click', function (event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+        // Redirect to the "service.html" page
         window.location.href = "service.html";
-    }
+    });
 
-    // Function to handle touch events for the "Team" link
-    function handleTeamClick() {
+    document.querySelector('.nav-link[href="team.html"]').addEventListener('click', function (event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+        // Redirect to the "team.html" page
         window.location.href = "team.html";
-    }
-
-    // Attach event listeners for the "Services" and "Team" links
-    document.querySelector('.d-lg-none a.nav-link[href="service.html"]').addEventListener('click', handleServicesClick);
-    document.querySelector('.nav-link[href="team.html"]').addEventListener('click', handleTeamClick);
+    });
+    document.querySelector('.nav-link[href="https://www.msit.in/"]').addEventListener('click', function (event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+        // Redirect to the "msit.in" page
+        window.location.href = "https://www.msit.in/";
+    });
 
         </script>
         
